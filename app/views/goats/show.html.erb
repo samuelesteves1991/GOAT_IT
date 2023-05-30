@@ -1,23 +1,21 @@
- <div class="container">
-    <div class="row"></div>
-    <div class="col-12 my-5 d-flex justify-content-center">
-    <h1>This is <%= @goat.name %></h1>
-      <small>
-        <%= link_to edit_goat_path(@goat) do %><i class="fa-regular fa-pen-to-square"></i><% end %>
-        <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
-          <i class="fa-regular fa-trash-can"></i>
-        <% end %>
-      </small>
-    </h1>
-    <ul>
-    <li>
-    <%= @goat.age %>
-    <%= @goat.milk %>
-    <%= @goat.horn_massage %>
-    <%= @goat.foot_massage %>
-    <%= @goat.whool %>
-    <%= @goat.pet_friendly %>
-
-    </li>
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center my-4">
+        <h1 class="mb-0">This is <%= @goat.name %></h1>
+        <div>
+        
+            <%= link_to edit_goat_path(@goat) do %><i class="far fa-edit"></i><% end %>
+            <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+                <i class="far fa-trash-alt"></i>
+            <% end %>
+        </div>
+    </div>
+    <hr>
+    <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item">Age: <%=@goat.age %></li>
+        <li class="list-group-item">Milk: <%= @goat.milk %></li>
+        <li class="list-group-item">Horn Massage: <%= @goat.horn_massage %></li>
+        <li class="list-group-item">Foot Massage: <%= @goat.foot_massage %></li>
+        <li class="list-group-item">Wool: <%= @goat.whool %></li>
+        <li class="list-group-item">Pet Friendly: <%= @goat.pet_friendly %></li>
     </ul>
 </div>
