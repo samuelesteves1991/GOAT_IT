@@ -1,5 +1,5 @@
 class GoatsController < ApplicationController
-  before_action :set_goat, only: %i[ show edit update destroy ]
+  before_action :set_goat, only: %i[show edit update destroy]
 
   def index
     @goats = Goat.all

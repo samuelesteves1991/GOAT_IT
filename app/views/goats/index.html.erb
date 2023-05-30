@@ -1,0 +1,12 @@
+<p style="color: pink"><%= notice %></p>
+
+<h1>Our Goats available</h1>
+
+<div id="goats">
+  <% @goats.each do |goat| %>
+    <%= render goat %>
+    <p>
+      <%= link_to "Show this goat", goat %>
+    </p>
+  <% end %>
+</div>
