@@ -35,7 +35,7 @@ class GoatsController < ApplicationController
 
   private
 
-  def set_goats
+  def set_goat
     @goat = Goat.find(params[:id])
   end
 

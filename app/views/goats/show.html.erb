@@ -1,0 +1,22 @@
+ <div class="container">
+    <h1>This is <%= @goat.name %></h1>
+      <small>
+        <%= link_to edit_goat_path(@goat) do %><i class="fa-regular fa-pen-to-square"></i><% end %>
+        <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </small>
+    </h1>
+    <hr>
+    <ul>
+    <li>
+    <%= @goat.age %>
+    <%= @goat.milk %>
+    <%= @goat.horn_massage %>
+    <%= @goat.foot_massage %>
+    <%= @goat.whool %>
+    <%= @goat.pet_friendly %>
+
+    </li>
+    </ul>
+</div>
