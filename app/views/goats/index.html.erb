@@ -1,14 +1,20 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-white">
-    <h1>See all the amazing goats available</h1>
-    <h3 class="typed-js" data-controller="typed-js"></h3>
+<div class="container-fluid bg-dark text-white py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <h1>See all the amazing goats available</h1>
+      <%# <% <h3 class="typed-js" data-controller="typed-js"></h3> %> %>
+    </div>
   </div>
+</div>
+<div class="container mt-5">
   <div class="row">
-    <% @goats.each do |list| %>
-      <div class="col-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to "Show this goat", @goat, class:"text-decoration-none" do %>
-          <div class="card-category">
-            <%= list.name %>
+    <% @goats.each do |goat| %>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <%= link_to "Show this goat", goat, class:"text-decoration-none" do %>
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <%= list.name %>
+            </div>
           </div>
         <% end %>
       </div>
