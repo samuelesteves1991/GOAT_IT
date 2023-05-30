@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8 text-center">
       <h1>See all the amazing goats available</h1>
-      <%# <% <h3 class="typed-js" data-controller="typed-js"></h3> %> %>
+      <%# <% <h3 class="typed-js" data-controller="typed-js"></h3> %>
     </div>
   </div>
 </div>
@@ -10,10 +10,10 @@
   <div class="row">
     <% @goats.each do |goat| %>
       <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <%= link_to "Show this goat", goat, class:"text-decoration-none" do %>
+        <%= link_to goat_path(goat), class: "text-decoration-none" do %>
           <div class="card h-100 shadow">
             <div class="card-body">
-              <%= list.name %>
+              <%= goat.name %>
             </div>
           </div>
         <% end %>
