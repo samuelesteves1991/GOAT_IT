@@ -5,10 +5,15 @@
   height: calc(100vh - 56px);
 }
 
-.container{
+.containerhomepage{
   margin-top: 60px;
   margin-right: 60px;
   color: #CD5C5C;
   background-color:#FFFAF0;
   display: center;
+}
+
+.navbarSupportedContent{
+  display: flex;
+  justify-content: flex-end;
 }
