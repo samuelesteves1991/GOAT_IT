@@ -30,7 +30,7 @@ class GoatsController < ApplicationController
 
   def destroy
     @goat.destroy
-    redirect_to garden_url, notice: "Goat was successfully deleted!"
+    redirect_to goat_url, notice: "Goat was successfully deleted!"
   end
 
   private
