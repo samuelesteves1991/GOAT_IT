@@ -8,11 +8,148 @@
 Goat.destroy_all
 User.destroy_all
 
-user_1 = User.create(email: "goatlover@lewagonofgoats.org", password: "123456")
+#user_1 = User.create(email: "goatlover@lewagonofgoats.org", password: "123456")
 
-10.times do
-  Goat.create(
-    name: Faker::Movies::Avatar.character,
-    user: user_1
-  )
-end
+#10.times do
+  #Goat.create(
+    #name: Faker::Movies::Avatar.character,
+    #user: user_1
+  #)
+#end
+
+user_1 = User.create!(
+  email: "goatlover@lewagonofgoats.org",
+  password: "123456",
+  first_name: "Malcolm",
+  last_name: "The Rich"
+)
+user_2 = User.create(
+  email: "miketheanimal@lewagonofgoats.org",
+  password: "123456",
+  first_name: "Mike",
+  last_name: "Animal"
+)
+user_3 = User.create(
+  email: "stevenspielberg@lewagonofgoats.org",
+  password: "123456",
+  first_name: "Steven",
+  last_name: "Spielberg"
+)
+user_4 = User.create(
+  email: "johnlenon@lewagonofgoats.org",
+  password: "123456",
+  first_name: "John",
+  last_name: "Lenon"
+)
+user_5 = User.create(
+  email: "chaliebrown@lewagonofgoats.org",
+  password: "123456",
+  first_name: "Charlie",
+  last_name: "Brown"
+)
+
+
+goat_1 = Goat.create!(
+  name: "Messi",
+  age: "12",
+  milk: true,
+  horn_massage: true,
+  foot_massage: false,
+  whool: true,
+  pet_friendly: true,
+  user: user_1,
+)
+goat_1.photo.attach(io: File.open('app/asset/images/name'), filename: 'nes.png', content_type: "image/png")
+
+goat_2 = Goat.create!(
+  name: "Donald",
+  age: "3",
+  milk: true,
+  horn_massage: true,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_4,
+)
+goat_3 = Goat.create!(
+  name: "Schumacher",
+  age: "8",
+  milk: false,
+  horn_massage: true,
+  foot_massage: true,
+  whool: true,
+  pet_friendly: false,
+  user: user_2,
+)
+goat_4 = Goat.create(
+  name: "Ronaldo",
+  age: "9",
+  milk: true,
+  horn_massage: true,
+  foot_massage: true,
+  whool: true,
+  pet_friendly: true,
+  user: user_3,
+)
+
+goat_5 = Goat.create(
+  name: "Maron5",
+  age: "2",
+  milk: false,
+  horn_massage: false,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_5,
+)
+goat_6 = Goat.create(
+  name: "Putin",
+  age: "5",
+  milk: false,
+  horn_massage: false,
+  foot_massage: false,
+  whool: true,
+  pet_friendly: false,
+  user: user_2,
+)
+goat_7 = Goat.create(
+  name: "Clinton",
+  age: "7",
+  milk: true,
+  horn_massage: false,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_1,
+)
+goat_8 = Goat.create(
+  name: "Brad Pitt",
+  age: "2",
+  milk: false,
+  horn_massage: false,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_3,
+)
+goat_9 = Goat.create(
+  name: "Rammnstein",
+  age: "6",
+  milk: false,
+  horn_massage: false,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_5,
+)
+goat_10 = Goat.create(
+  name: "Pure Evil",
+  age: "3",
+  milk: true,
+  horn_massage: true,
+  foot_massage: true,
+  whool: true,
+  pet_friendly: false,
+  user: user_4,
+)
+puts 'Seed: Finished seeding!'
