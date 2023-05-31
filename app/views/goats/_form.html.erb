@@ -1,1 +1,19 @@
+<%= simple_form_for(@goat) do |f| %>
 
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :milk %>
+    <%= f.input :horn_massage %>
+    <%= f.input :foot_massage%>
+    <%= f.input :whool %>
+    <%= f.input :pet_friendly %>
+    <%= f.input :photo, as: :file %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Confirm", class: "btn-goat" %> |
+    <%= link_to "Back to goats", goats_path, class: "btn-goat" %>
+  </div>
+<% end %>

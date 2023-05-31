@@ -1,9 +1,21 @@
-<h1>New goat</h1>
+<h1>Add a new goat</h1>
 
-<%= render "form", goat: @goat %>
+<%= simple_form_for(@goat) do |f| %>
 
-<br>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :milk %>
+    <%= f.input :horn_massage %>
+    <%= f.input :foot_massage%>
+    <%= f.input :whool %>
+    <%= f.input :pet_friendly %>
+    <%= f.input :photo, as: :file %>
 
-<div>
-  <%= link_to "Back to index", goat_path %>
-</div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Confirm", class: "btn-goat" %> |
+    <%= link_to "Cancel", goats_path, class: "btn-goat" %>
+  </div>
+<% end %>

@@ -1,7 +1,3 @@
 <h1>Want to edit <%= @goat.name %> ?</h1>
+<%= render "form" %>
 
-
-<div>
-  <%= link_to "Confirm", goat_path(@goat), class: "btn-goat" %> |
-  <%= link_to "Back to goats", goats_path, class: "btn-goat" %>
-</div>
