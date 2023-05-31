@@ -8,10 +8,15 @@ class GoatsController < ApplicationController
   def show
   end
 
+  def new
+    @goat = Goat.new
+  end
+
   def create
     @goat = Goat.new(goat_params)
+    @goat.user = current_user
     if @goat.save
-      redirect_to root_path
+      redirect_to goats_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -22,7 +27,7 @@ class GoatsController < ApplicationController
 
   def update
     if @goat.update(goat_params)
-      redirect_to root_path
+      redirect_to goats_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,6 +43,7 @@ class GoatsController < ApplicationController
   def set_goat
     @goat = Goat.find(params[:id])
   end
+
 
   def post_params
     params.require(:goat).permit(:name, :age, :milk, :horn_massage, :foot_massage, :whool, :pet_friendly, :photo)

@@ -9,23 +9,18 @@
             <% end %>
           </div>
     </div>
-    </div>
-      <hr>
-  <div class="container d-flex justify-content-between">
-    <div class="col-lg-6">
-       <%= cl_image_tag @goat.photo.key, height: 300, width: 400, crop: :fill %>
-    </div>
-      <ul class="list-group list-group-flush mb-4">
-          <li class="list-group-item">Age: <%=@goat.age %></li>
-          <li class="list-group-item">Milk: <%= @goat.milk %></li>
-          <li class="list-group-item">Horn Massage: <%= @goat.horn_massage %></li>
-          <li class="list-group-item">Foot Massage: <%= @goat.foot_massage %></li>
-          <li class="list-group-item">Wool: <%= @goat.whool %></li>
-          <li class="list-group-item">Pet Friendly: <%= @goat.pet_friendly %></li>
-      </ul>
-    <div class="card-body">
-        <% @goat %>
-        <button class="btn btn-primary mt-3 mx-5">Select Goat</button>
-    </div>
-  </div>
+    <hr>
+    <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item">Age: <%=@goat.age %></li>
+        <li class="list-group-item">Milk: <%= @goat.milk %></li>
+        <li class="list-group-item">Horn Massage: <%= @goat.horn_massage %></li>
+        <li class="list-group-item">Foot Massage: <%= @goat.foot_massage %></li>
+        <li class="list-group-item">Wool: <%= @goat.whool %></li>
+        <li class="list-group-item">Pet Friendly: <%= @goat.pet_friendly %></li>
+    </ul>
+      <div class="card-body">
+      <%= link_to "Select this goat",root_path, class: "btn-goat"%>
+
+
+</div>
 </div>
