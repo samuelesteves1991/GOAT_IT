@@ -44,8 +44,9 @@ class GoatsController < ApplicationController
     @goat = Goat.find(params[:id])
   end
 
-  def goat_params
-    params.require(:goat).permit(:name, :age, :milk, :horn_massage, :foot_massage, :whool, :pet_friendly)
+
+  def post_params
+    params.require(:goat).permit(:name, :age, :milk, :horn_massage, :foot_massage, :whool, :pet_friendly, :photo)
   end
 
 end
