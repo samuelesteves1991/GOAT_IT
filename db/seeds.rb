@@ -59,7 +59,6 @@ goat_1 = Goat.create!(
   pet_friendly: true,
   user: user_1,
 )
-goat_1.photo.attach(io: File.open('app/asset/images/name'), filename: 'nes.png', content_type: "image/png")
 
 goat_2 = Goat.create!(
   name: "Donald",
