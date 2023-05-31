@@ -7,13 +7,12 @@
 
 .containerhomepage{
   margin-top: 60px;
-  margin-right: 60px;
+  margin:40px;
   color: #CD5C5C;
   background-color:#FFFAF0;
   display: center;
-}
-
-.navbarSupportedContent{
-  display: flex;
-  justify-content: flex-end;
+  border-radius: 5px;
+  text-align: center;
+  font-size: smaller;
+  padding: 5px;
 }
