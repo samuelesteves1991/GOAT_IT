@@ -47,8 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_132001) do
     t.bigint "goat_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "start_date"
-    t.string "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.index ["goat_id"], name: "index_bookings_on_goat_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
