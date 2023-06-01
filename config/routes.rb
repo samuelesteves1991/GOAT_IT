@@ -11,8 +11,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :index, :new, :create ]
   end
 
-  # resources :bookings
+  resources :bookings
 
 
+  get '/my_bookings', to: "bookings#index"
 
 end
