@@ -1,0 +1,11 @@
+<h1>Bookings</h1>
+
+<div class="booking-list">
+  <% @bookings.each do |booking| %>
+    <div class="booking">
+      <div class="booking-id"><strong>ID:</strong> <%= booking.id %></div>
+      <div class="booking-user"><strong>User:</strong> <%= booking.user.first_name %><%= booking.user.last_name %></div>
+      <div class="booking-date"><strong>Booking Date:</strong> <%= booking.booking_date %></div>
+    </div>
+  <% end %>
+</div>

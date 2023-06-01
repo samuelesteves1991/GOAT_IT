@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   # resources :bookings
 
 
+  get '/my_bookings', to: "bookings#index"
 
 end
