@@ -1,13 +1,18 @@
 .btn-goat{
-background-color:#CD5C5C;;
-color: white;
 text-align: center;
 padding: 10px 20px;
 border-radius: 5px;
 text-decoration: none;
 display: inline-block;
+font-size: 18px;
 }
 
-.btn-goat:hover {
-  color: #FFE4C4;
+.add {
+  background-color: white;
+  color: #CD5C5C;
+}
+
+.see_all {
+ color: white;
+ background-color: #CD5C5C;
 }
