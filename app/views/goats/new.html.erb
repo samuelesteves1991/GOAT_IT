@@ -1,21 +1,30 @@
-<h1>Add a new goat</h1>
+<div class="bg-bisque" style="height: 100%">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card shadow col-md-8 p-5">
+          <h1>List your amazing goat:</h1>
 
-<%= simple_form_for(@goat) do |f| %>
+          <%= simple_form_for(@goat) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :age %>
-    <%= f.input :milk %>
-    <%= f.input :horn_massage %>
-    <%= f.input :foot_massage%>
-    <%= f.input :whool %>
-    <%= f.input :pet_friendly %>
-    <%= f.input :photo, as: :file %>
+            <div class="form-inputs">
+              <%= f.input :name %>
+              <%= f.input :age %>
+              <%= f.input :milk %>
+              <%= f.input :horn_massage %>
+              <%= f.input :foot_massage%>
+              <%= f.input :whool %>
+              <%= f.input :pet_friendly %>
+              <%= f.input :photo, as: :file %>
 
+            </div>
+
+            <div class="form-actions">
+              <%= f.submit "Confirm", class: "btn-goat" %> |
+              <%= link_to "Cancel", goats_path, class: "btn-goat" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.submit "Confirm", class: "btn-goat" %> |
-    <%= link_to "Cancel", goats_path, class: "btn-goat" %>
-  </div>
-<% end %>
+</div>

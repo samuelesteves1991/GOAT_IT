@@ -1,8 +1,8 @@
-<div class="bg-bisque">
+<div class="bg-bisque" style="height: 100%">
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
-        <h1>See all the amazing goats available</h1>
+        <h1><b>These goats are waiting for you:</b></h1>
         <%# <% <h3 class="typed-js" data-controller="typed-js"></h3> %>
       </div>
     </div>
@@ -13,8 +13,13 @@
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <%= link_to goat_path(goat), class: "text-decoration-none" do %>
             <div class="card h-100 shadow">
-              <div class="card-body">
-                <%= goat.name %>
+            <% if goat.photo.present? %>
+              <%= cl_image_tag goat.photo.key, height: 200, crop: :fill %>
+              <% else %>
+              <%= image_tag "logo.png", height: 200 %>
+              <% end %>
+                <div class="card-body text-center">
+                  <%= goat.name %>
               </div>
             </div>
           <% end %>

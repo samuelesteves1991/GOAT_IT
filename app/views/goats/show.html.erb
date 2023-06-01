@@ -1,26 +1,47 @@
-<div class="container">
-     <div class="d-flex justify-content-between align-items-center my-4">
-        <h1 class="mb-0">This is <%= @goat.name %></h1>
-          <div>
+<div class="bg-bisque" style="height: 100%">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card col-8 shadow p-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center my-4">
+                <h1 class="mb-0">This is <%= @goat.name %></h1>
+                  <div>
 
-            <%= link_to edit_goat_path(@goat) do %><i class="far fa-edit"></i><% end %>
-            <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
-                <i class="far fa-trash-alt"></i>
-            <% end %>
-          </div>
+                    <%= link_to edit_goat_path(@goat) do %><i class="far fa-edit"></i><% end %>
+                    <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+                        <i class="far fa-trash-alt"></i>
+                    <% end %>
+                  </div>
+            </div>
+            <hr>
+            <div class="container">
+                  <div class="d-flex">
+                    <div class="row col-log-6">
+                      <% if @goat.photo.present? %>
+                        <%= cl_image_tag @goat.photo.key, height: 200, crop: :fill %>
+                        <% else %>
+                        <%= image_tag "logo.png", height: 200 %>
+                        <% end %>
+                      </div>
+                      <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item">Age: <%=@goat.age %></li>
+                          <li class="list-group-item">Milk: <%= @goat.milk %></li>
+                          <li class="list-group-item">Horn Massage: <%= @goat.horn_massage %></li>
+                          <li class="list-group-item">Foot Massage: <%= @goat.foot_massage %></li>
+                          <li class="list-group-item">Wool: <%= @goat.whool %></li>
+                          <li class="list-group-item">Pet Friendly: <%= @goat.pet_friendly %></li>
+                      </ul>
+                    </div>
+                  </div>
+                    <div class="row d-felx">
+                      <div class="card-body">
+                        <%= link_to "Select this goat",root_path, class: "btn-goat primary"%>
+                        <%= link_to "Go back",goats_path, class: "btn-goat secondary"%>
+                      </div>
+                    </div>
+            </div>
+        </div>
+      </div>
     </div>
-    <hr>
-    <ul class="list-group list-group-flush mb-4">
-        <li class="list-group-item">Age: <%=@goat.age %></li>
-        <li class="list-group-item">Milk: <%= @goat.milk %></li>
-        <li class="list-group-item">Horn Massage: <%= @goat.horn_massage %></li>
-        <li class="list-group-item">Foot Massage: <%= @goat.foot_massage %></li>
-        <li class="list-group-item">Wool: <%= @goat.whool %></li>
-        <li class="list-group-item">Pet Friendly: <%= @goat.pet_friendly %></li>
-    </ul>
-      <div class="card-body">
-      <%= link_to "Select this goat",new_goat_booking_path(@goat), class: "btn-goat"%>
-
-
-</div>
-</div>
+  </div>
+ </div>
