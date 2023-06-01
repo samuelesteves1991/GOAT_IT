@@ -23,7 +23,7 @@ before_action :set_goat, only: [:new, :create]
     #@booking.user_id = current_user.id
     @booking.user = current_user
     if @booking.save
-      redirect_to root_path, notice: 'Booking was successfully created.'
+      redirect_to my_bookings_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -36,7 +36,7 @@ before_action :set_goat, only: [:new, :create]
     if @booking.update(booking_params)
       redirect_to @booking, notice: 'Booking was successfully updated.'
     else
-      render :edit
+      render :new
     end
   end
 

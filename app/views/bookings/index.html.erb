@@ -14,15 +14,17 @@
             <th>End Date</th>
           </tr>
         </thead>
-        <% @bookings.each do |booking|%>
+        <% @bookings.each do |booking| %>
           <tr>
-            <td> <%= booking.user.email %></td>
-            <td> <%= booking.goat.name %></td>
+            <td><%= booking.user.email %></td>
+            <td><%= booking.goat.name %></td>
             <td><%= booking.start_date %></td>
-            <td><%= booking.end_date%></td>
+            <td><%= booking.end_date %></td>
           </tr>
-        <%end%>
+        <% end %>
       </table>
     </div>
+
+ 
   </div>
 </div>
