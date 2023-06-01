@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
 before_action :set_booking, only: [:show, :edit, :update, :destroy]
+before_action :set_goat, only: [:new, :create]
 
   def index
     @bookings = Booking.where(user: current_user)
@@ -22,7 +23,7 @@ before_action :set_booking, only: [:show, :edit, :update, :destroy]
     #@booking.user_id = current_user.id
     @booking.user = current_user
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to root_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -50,7 +51,11 @@ before_action :set_booking, only: [:show, :edit, :update, :destroy]
     @booking = Booking.find(params[:id])
   end
 
+  def set_goat
+    @goat = Goat.find(params[:goat_id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:name, :email, :phone, :date, :time)
+    params.require(:booking).permit(:name, :email, :phone, :date)
   end
 end
