@@ -56,6 +56,6 @@ before_action :set_goat, only: [:new, :create]
   end
 
   def booking_params
-    params.require(:booking).permit(:name, :email, :phone, :date)
+    params.require(:booking).permit(:booking_date, :name, :email, :phone, :date)
   end
 end

@@ -1,11 +1,28 @@
-<h1>Bookings</h1>
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <h1>Bookings</h1>
+  </div>
 
-<div class="booking-list">
-  <% @bookings.each do |booking| %>
-    <div class="booking">
-      <div class="booking-id"><strong>ID:</strong> <%= booking.id %></div>
-      <div class="booking-user"><strong>User:</strong> <%= booking.user.first_name %><%= booking.user.last_name %></div>
-      <div class="booking-date"><strong>Booking Date:</strong> <%= booking.booking_date %></div>
+  <div id="wrap">
+    <div id="main" class="container clear-top">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Goat Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <% @bookings.each do |booking|%>
+          <tr>
+            <td> <%= booking.user.email %></td>
+            <td> <%= booking.goat.name %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date%></td>
+          </tr>
+        <%end%>
+      </table>
     </div>
-  <% end %>
+  </div>
 </div>
