@@ -11,6 +11,7 @@
                     <%= link_to goat_path(@goat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
                         <i class="far fa-trash-alt"></i>
                     <% end %>
+
                   </div>
             </div>
             <hr>
@@ -33,9 +34,9 @@
                       </ul>
                     </div>
                   </div>
-                    <div class="row d-felx">
+                    <div class="row d-flex">
                       <div class="card-body">
-                        <%= link_to "Select this goat",root_path, class: "btn-goat primary"%>
+                        <%= link_to "Select this goat", new_goat_booking_path(@goat), class: "btn-goat primary"%>
                         <%= link_to "Go back",goats_path, class: "btn-goat secondary"%>
                       </div>
                     </div>
