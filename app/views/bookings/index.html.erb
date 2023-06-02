@@ -12,6 +12,7 @@
             <th>Goat Name</th>
             <th>Start Date</th>
             <th>End Date</th>
+            <th></th>
           </tr>
         </thead>
         <% @bookings.each do |booking| %>
@@ -20,6 +21,11 @@
             <td><%= booking.goat.name %></td>
             <td><%= booking.start_date %></td>
             <td><%= booking.end_date %></td>
+            <td>
+              <%= link_to booking_path(booking), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </table>
