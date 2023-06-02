@@ -35,7 +35,7 @@ class GoatsController < ApplicationController
 
   def destroy
     @goat.destroy
-    redirect_to goat_url, notice: "Goat was successfully deleted!"
+    redirect_to goats_path, status: :see_other, notice: "Goat was successfully deleted!"
   end
 
   private
