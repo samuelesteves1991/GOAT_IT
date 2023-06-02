@@ -5,6 +5,7 @@ border-radius: 5px;
 text-decoration: none;
 display: inline-block;
 font-size: 18px;
+border: none;
 }
 
 .add {
@@ -15,4 +16,20 @@ font-size: 18px;
 .see_all {
  color: white;
  background-color: #CD5C5C;
+ margin-left: 0 !important;
+ margin-bottom: 8px !important;
 }
+
+.btn {
+  --bs-btn-color: #ffffff !important;
+}
+
+.see_all:hover {
+  color: white !important;
+  background-color: #CD5C5C !important;
+  margin-left: 0 !important;
+ }
+
+ .see_all a {
+  color: white !important;
+ }
