@@ -14,7 +14,7 @@
           <%= link_to goat_path(goat), class: "text-decoration-none" do %>
             <div class="card h-100 shadow">
             <% if goat.photo.present? %>
-              <%= cl_image_tag goat.photo.key, height: 200, crop: :fill %>
+              <%= cl_image_tag goat.photo.key, height: 300, crop: :fill %>
               <% else %>
               <%= image_tag "goat2.png", height: 200 %>
               <% end %>

@@ -17,9 +17,9 @@
                   <div class="d-flex">
                     <div class="row col-lo-6">
                       <% if @goat.photo.present? %>
-                        <%= cl_image_tag @goat.photo.key, height: 200, crop: :fill %>
+                        <%= cl_image_tag @goat.photo.key, height: 400, crop: :fill %>
                         <% else %>
-                        <%= image_tag "logo.png", height: 200 %>
+                        <%= image_tag "logo.png", height: 400 %>
                         <% end %>
                       </div>
                       <ul class="list-group list-group-flush mb-4">
