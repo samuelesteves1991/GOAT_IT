@@ -51,7 +51,7 @@ user_5 = User.create(
 
 
 goat_1 = Goat.new(
-  name: "Messi",
+  name: "Rammnstein",
   age: "12",
   milk: true,
   horn_massage: true,
@@ -61,11 +61,11 @@ goat_1 = Goat.new(
   user: user_1,
 )
 
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg")
+file = URI.open("https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FEDRAWFZHJOEDMVVBBU3C6EGGQ.jpg")
 goat_1.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
 goat_1.save
 
-goat_2 = Goat.create!(
+goat_2 = Goat.new(
   name: "Donald",
   age: "3",
   milk: true,
@@ -75,7 +75,12 @@ goat_2 = Goat.create!(
   pet_friendly: true,
   user: user_4,
 )
-goat_3 = Goat.create!(
+
+file = URI.open("https://media.istockphoto.com/id/177369626/photo/funny-goat-puts-out-its-tongue.jpg?s=612x612&w=0&k=20&c=YlmA4-C8o5XFsoYMLK-VBnhQku1tmeBm7DJBkrzJuGw=")
+goat_2.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_2.save
+
+goat_3 = Goat.new(
   name: "Schumacher",
   age: "8",
   milk: false,
@@ -85,7 +90,12 @@ goat_3 = Goat.create!(
   pet_friendly: false,
   user: user_2,
 )
-goat_4 = Goat.create(
+
+file = URI.open("https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1240/MTk3MTM2NTIxNzY0MDIxNTY3/15-best-pet-goat-breeds-for-pets.webp")
+goat_3.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_3.save
+
+goat_4 = Goat.new(
   name: "Ronaldo",
   age: "9",
   milk: true,
@@ -96,7 +106,11 @@ goat_4 = Goat.create(
   user: user_3,
 )
 
-goat_5 = Goat.create(
+file = URI.open("https://i.ytimg.com/vi/nlYlNF30bVg/hqdefault.jpg")
+goat_4.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_4.save
+
+goat_5 = Goat.new(
   name: "Maron5",
   age: "2",
   milk: false,
@@ -106,7 +120,12 @@ goat_5 = Goat.create(
   pet_friendly: true,
   user: user_5,
 )
-goat_6 = Goat.create(
+
+file = URI.open("https://www.rd.com/wp-content/uploads/2021/03/GettyImages-1199243328.jpg")
+goat_5.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_5.save
+
+goat_6 = Goat.new(
   name: "Putin",
   age: "5",
   milk: false,
@@ -116,7 +135,12 @@ goat_6 = Goat.create(
   pet_friendly: false,
   user: user_2,
 )
-goat_7 = Goat.create(
+
+file = URI.open("https://t4.ftcdn.net/jpg/02/39/06/15/360_F_239061549_UwEXi7WgJNgAihnUafbBVCfjmIInJ5yd.jpg")
+goat_6.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_6.save
+
+goat_7 = Goat.new(
   name: "Clinton",
   age: "7",
   milk: true,
@@ -126,7 +150,12 @@ goat_7 = Goat.create(
   pet_friendly: true,
   user: user_1,
 )
-goat_8 = Goat.create(
+
+file = URI.open("https://ichef.bbci.co.uk/images/ic/1920x1080/p0bxb1mx.jpg")
+goat_7.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_7.save
+
+goat_8 = Goat.new(
   name: "Brad Pitt",
   age: "2",
   milk: false,
@@ -136,8 +165,13 @@ goat_8 = Goat.create(
   pet_friendly: true,
   user: user_3,
 )
-goat_9 = Goat.create(
-  name: "Rammnstein",
+
+file = URI.open("https://petkeen.com/wp-content/uploads/2021/11/white-goat-in-the-meadow.jpeg")
+goat_8.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_8.save
+
+goat_9 = Goat.new(
+  name: "Messi",
   age: "6",
   milk: false,
   horn_massage: false,
@@ -146,14 +180,22 @@ goat_9 = Goat.create(
   pet_friendly: true,
   user: user_5,
 )
-goat_10 = Goat.create(
-  name: "Pure Evil",
-  age: "3",
-  milk: true,
-  horn_massage: true,
-  foot_massage: true,
-  whool: true,
-  pet_friendly: false,
-  user: user_4,
+
+file = URI.open("https://pbs.twimg.com/media/FjFBaiQXEAIj-ju.jpg:large")
+goat_9.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_9.save
+
+goat_10 = Goat.new(
+  name: "Miguel The King",
+  age: "6",
+  milk: false,
+  horn_massage: false,
+  foot_massage: false,
+  whool: false,
+  pet_friendly: true,
+  user: user_5,
 )
-puts 'Seed: Finished seeding!'
+
+file = URI.open("https://media.cnn.com/api/v1/images/stellar/prod/230102104629-goat-banned-words.jpg?c=16x9&q=h_720,w_1280,c_fill")
+goat_10.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_10.save
