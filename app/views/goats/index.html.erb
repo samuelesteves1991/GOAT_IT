@@ -1,4 +1,4 @@
-<div class="bg-bisque" style="height: 100%">
+<div class="bg-bisque" style="min-height: 100vh">
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
@@ -16,7 +16,7 @@
             <% if goat.photo.present? %>
               <%= cl_image_tag goat.photo.key, height: 200, crop: :fill %>
               <% else %>
-              <%= image_tag "logo.png", height: 200 %>
+              <%= image_tag "goat2.png", height: 200 %>
               <% end %>
                 <div class="card-body text-center">
                   <%= goat.name %>

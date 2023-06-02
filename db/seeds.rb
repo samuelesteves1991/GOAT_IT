@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 Goat.destroy_all
 User.destroy_all
 
@@ -49,7 +50,7 @@ user_5 = User.create(
 )
 
 
-goat_1 = Goat.create!(
+goat_1 = Goat.new(
   name: "Messi",
   age: "12",
   milk: true,
@@ -59,6 +60,10 @@ goat_1 = Goat.create!(
   pet_friendly: true,
   user: user_1,
 )
+
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg")
+goat_1.photo.attach(io: file, filename: "goat_1.jpeg", content_type: "image/jpeg")
+goat_1.save
 
 goat_2 = Goat.create!(
   name: "Donald",
